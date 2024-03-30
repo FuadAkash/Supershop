@@ -1,0 +1,79 @@
+﻿@model List<items>
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-white">Items</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Items" asp-action="Create" class="btn btn-outline-light">
+                <i class="bi bi-plus-square"></i> New Items
+            </a>
+        </div>
+        <style>
+            th {
+                text-align: center;
+            }
+
+            td {
+                text-align: center;
+            }
+        </style>
+        <table class="table table-bordered table-striped ">
+            <thead>
+                <tr class ="table-secondary">
+                    <th> 
+                        Items Name
+                    </th>
+                    <th>
+                        Items ID
+                    </th>
+                    <th>
+                        Items Type
+                    </th>
+                    <th>
+                        Items Quantity
+                    </th>
+                    <th>
+                        Items Location
+                    </th>
+                    <th>
+                        Edit & Delete
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var obj in Model){
+                <tr class="table-info">
+                    <td>
+                        @obj.Name
+                    </td>
+                    <td>
+                        @obj.Id
+                    </td>
+                    <td>
+                        @obj.Type
+                    </td>
+                    <td>
+                        @obj.Count
+                    </td>
+                    <td>
+                        @obj.location
+                    </td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                                <a asp-controller="Items" asp-action="Edit" asp-route-Id="@obj.Id" class="btn btn-dark mx-2">
+                                <i class="bi bi-tools"></i> Edit
+                            </a>
+
+                                <a asp-controller="Items" asp-action="Delete" class="btn btn-danger mx-2">
+                                <i class="bi bi-trash3"></i> Delete
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                }
+            </tbody>
+    
+        </table>
+    </div>
+</div>
