@@ -22,6 +22,42 @@ namespace Supershop.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Supershop.Models.Users", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Supershop.Models.items", b =>
                 {
                     b.Property<int>("Id")
@@ -33,10 +69,16 @@ namespace Supershop.Migrations
                     b.Property<int?>("Count")
                         .HasColumnType("int");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<string>("Type")
                         .IsRequired()
@@ -55,34 +97,12 @@ namespace Supershop.Migrations
                         new
                         {
                             Id = 1,
-                            Count = 0,
-                            Name = "Pepsi",
-                            Type = "Softdrinks",
-                            location = "A1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Count = 0,
-                            Name = "Fanta",
-                            Type = "Softdrinks",
-                            location = "A1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Count = 0,
-                            Name = "7up",
-                            Type = "Softdrinks",
-                            location = "A1"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Count = 0,
-                            Name = "Cockacola",
-                            Type = "Softdrinks",
-                            location = "A1"
+                            Count = 15,
+                            ImageUrl = "/images/pepsi.png",
+                            Name = "Chokbar",
+                            Price = 35.5,
+                            Type = "Icecream",
+                            location = "F1"
                         });
                 });
 #pragma warning restore 612, 618

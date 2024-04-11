@@ -15,5 +15,9 @@ namespace Supershop.Models
         = 0;
         [Range(0, maximum: 1000)]
         public string location { get; set; }
+        [Required]
+        public double Price { get; set; }
+        public string? ImageUrl { get; set; }
+
     }
 }

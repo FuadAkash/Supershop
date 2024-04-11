@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET\\Supershop\\Supershop.csproj": {}
+    "D:\\.NET\\SuperShop\\Supershop.csproj": {}
   },
   "projects": {
-    "D:\\.NET\\Supershop\\Supershop.csproj": {
+    "D:\\.NET\\SuperShop\\Supershop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET\\Supershop\\Supershop.csproj",
+        "projectUniqueName": "D:\\.NET\\SuperShop\\Supershop.csproj",
         "projectName": "Supershop",
-        "projectPath": "D:\\.NET\\Supershop\\Supershop.csproj",
+        "projectPath": "D:\\.NET\\SuperShop\\Supershop.csproj",
         "packagesPath": "C:\\Users\\fuada\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET\\Supershop\\obj\\",
+        "outputPath": "D:\\.NET\\SuperShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,9 +48,21 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.AspNetCore.Mvc.RazorPages": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.TagHelpers": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -73,6 +85,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "System.Security.Cryptography.Cng": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

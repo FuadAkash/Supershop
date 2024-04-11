@@ -1,0 +1,20 @@
+﻿@model List<items>
+
+@{
+    int totalQuantity = 0;
+    foreach (var item in Model)
+    {
+        if (item.Count.HasValue)
+        {
+            totalQuantity += item.Count.Value;
+        }
+    }
+}
+
+<div class="card border-info mb-3" style="max-width: 20rem;">
+    <div class="card-header">Total Inventory</div>
+    <div class="card-body">
+        <p class="card-text">Total items in inventory: @Model.Count</p>
+        <p class="card-text">Total quantity in inventory: @totalQuantity</p>
+    </div>
+</div>
