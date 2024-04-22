@@ -1,0 +1,341 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\.NET\\Supershop\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\Supershop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Supershop.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\1149db69-0a7a-40b7-9b60-f9d26779af0c_facewash.jpg",
+      "PackagePath": "staticwebassets\\images\\1149db69-0a7a-40b7-9b60-f9d26779af0c_facewash.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\14711a65-958d-4ffa-895f-7350db5ceefd_dove.png",
+      "PackagePath": "staticwebassets\\images\\14711a65-958d-4ffa-895f-7350db5ceefd_dove.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\1ac2069d-f7c6-4467-96c5-c820a4a41dd6_pepsi.png",
+      "PackagePath": "staticwebassets\\images\\1ac2069d-f7c6-4467-96c5-c820a4a41dd6_pepsi.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\21087b83-11d2-46a0-a959-a955f44d01fd_lays.jpg",
+      "PackagePath": "staticwebassets\\images\\21087b83-11d2-46a0-a959-a955f44d01fd_lays.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\29d87769-066a-4148-87f3-2ce8690bdae6_dove.png",
+      "PackagePath": "staticwebassets\\images\\29d87769-066a-4148-87f3-2ce8690bdae6_dove.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\34472314-d186-4d2d-b5a0-eee0ad6505a1_green-apple.png",
+      "PackagePath": "staticwebassets\\images\\34472314-d186-4d2d-b5a0-eee0ad6505a1_green-apple.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\36f08bf3-46cf-4248-8ee9-79e0900bef4b_fanta.png",
+      "PackagePath": "staticwebassets\\images\\36f08bf3-46cf-4248-8ee9-79e0900bef4b_fanta.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\4c4d557b-8590-43a6-b196-71e604a3d8f9_fanta.png",
+      "PackagePath": "staticwebassets\\images\\4c4d557b-8590-43a6-b196-71e604a3d8f9_fanta.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\6af45b7a-6d15-468a-a37f-38677dfeaa58_Ice Cream.jpg",
+      "PackagePath": "staticwebassets\\images\\6af45b7a-6d15-468a-a37f-38677dfeaa58_Ice Cream.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\8492b294-9622-4fd1-98a7-596b3968ab70_lays.jpg",
+      "PackagePath": "staticwebassets\\images\\8492b294-9622-4fd1-98a7-596b3968ab70_lays.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\899546bf-11f6-4435-910a-6a3c4c2eefc3_dan-cake.jpg",
+      "PackagePath": "staticwebassets\\images\\899546bf-11f6-4435-910a-6a3c4c2eefc3_dan-cake.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\8e3eebe9-89ea-4207-b586-78f86d0c2547_facewash.jpg",
+      "PackagePath": "staticwebassets\\images\\8e3eebe9-89ea-4207-b586-78f86d0c2547_facewash.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\90f3879d-f941-4f22-975e-2b3a5525f4f6_pepsi.png",
+      "PackagePath": "staticwebassets\\images\\90f3879d-f941-4f22-975e-2b3a5525f4f6_pepsi.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\a4971162-f7fd-4748-931e-99c6b4a3c097_images.jpeg",
+      "PackagePath": "staticwebassets\\images\\a4971162-f7fd-4748-931e-99c6b4a3c097_images.jpeg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\a61e3529-33d8-4cd0-b94e-aeeb5c225d6f_Ice Cream.jpg",
+      "PackagePath": "staticwebassets\\images\\a61e3529-33d8-4cd0-b94e-aeeb5c225d6f_Ice Cream.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\ac456b2d-294a-468f-a637-f9896a0c8684_images.jpeg",
+      "PackagePath": "staticwebassets\\images\\ac456b2d-294a-468f-a637-f9896a0c8684_images.jpeg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\b145de39-5aef-4239-baa8-d3618535e330_raw-chicken.webp",
+      "PackagePath": "staticwebassets\\images\\b145de39-5aef-4239-baa8-d3618535e330_raw-chicken.webp"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\c85c3bd8-6144-4b3a-bc2f-595e5fc55209_dan-cake.jpg",
+      "PackagePath": "staticwebassets\\images\\c85c3bd8-6144-4b3a-bc2f-595e5fc55209_dan-cake.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\ed78c53c-1e9a-4ae8-bfd8-28cb9866c7e4_nestle-maggi.jpeg",
+      "PackagePath": "staticwebassets\\images\\ed78c53c-1e9a-4ae8-bfd8-28cb9866c7e4_nestle-maggi.jpeg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\f67dc651-b5e1-4443-bff9-2807b6aee8ec_nestle.jpeg",
+      "PackagePath": "staticwebassets\\images\\f67dc651-b5e1-4443-bff9-2807b6aee8ec_nestle.jpeg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\02dda1fa-8309-4b9e-8e62-42beec058e5f_Md-Arif-Akash.png",
+      "PackagePath": "staticwebassets\\usersimage\\02dda1fa-8309-4b9e-8e62-42beec058e5f_Md-Arif-Akash.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\0f2a03ba-e079-4b7a-9bc0-5f59c788a60d_Md-Arif-Akash.png",
+      "PackagePath": "staticwebassets\\usersimage\\0f2a03ba-e079-4b7a-9bc0-5f59c788a60d_Md-Arif-Akash.png"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\241765f5-4939-4fdb-bf9e-6ebda9bd7d17_Nahiyan.jpg",
+      "PackagePath": "staticwebassets\\usersimage\\241765f5-4939-4fdb-bf9e-6ebda9bd7d17_Nahiyan.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\29a413fd-a848-4d03-8993-739c36358e36_my-passport-photo.jpg",
+      "PackagePath": "staticwebassets\\usersimage\\29a413fd-a848-4d03-8993-739c36358e36_my-passport-photo.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\425af4df-43d8-4ab7-a835-7db8be5160da_Nahiyan.jpg",
+      "PackagePath": "staticwebassets\\usersimage\\425af4df-43d8-4ab7-a835-7db8be5160da_Nahiyan.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\d3d03377-b497-44af-91b0-69b2096d4604_my-passport-photo.jpg",
+      "PackagePath": "staticwebassets\\usersimage\\d3d03377-b497-44af-91b0-69b2096d4604_my-passport-photo.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Supershop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.Supershop.props",
+      "PackagePath": "build\\Supershop.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Supershop.props",
+      "PackagePath": "buildMultiTargeting\\Supershop.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.Supershop.props",
+      "PackagePath": "buildTransitive\\Supershop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -18,6 +18,10 @@ namespace Supershop.Models
         [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
 
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [NotMapped] // This property will not be mapped to the database
+        public string ConfirmPassword { get; set; }
+
         public string? Phone { get; set; }
 
         [Required(ErrorMessage = "Type is required")]

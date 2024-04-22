@@ -7,6 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Supershop.Data;
 using System;
+using Microsoft.AspNetCore.Authorization;
+using Supershop.Authorization;
+using Supershop;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,12 +34,43 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.Cookie.HttpOnly = true;
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Cookie expiration time
         options.LoginPath = "/Users/Login"; // Redirect to login page if unauthorized
-        options.AccessDeniedPath = "/Home/AccessDenied"; // Redirect if access is denied
+        options.AccessDeniedPath = "/Home/Index"; // Redirect if access is denied
         options.SlidingExpiration = true; // Extend expiration on each request
+
+        // Event to handle access denied redirect
+        options.Events = new CookieAuthenticationEvents
+        {
+            OnRedirectToAccessDenied = context =>
+            {
+                context.Response.Redirect(context.RedirectUri);
+                context.Response.Cookies.Append("UserUnauthorized", "true");
+                return Task.CompletedTask;
+            }
+        };
     });
+
 
 // Add IHttpContextAccessor
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy(AdminAuthorization.PolicyName, policy =>
+    {
+        policy.Requirements.Add(new AdminRequirement("Admin"));
+    });
+
+    // Add policy for Admin and MTofficer authorization
+    options.AddPolicy(OfficerAuthorization.PolicyName, policy =>
+    {
+        policy.Requirements.Add(new OfficerRequirement("Admin", "MTofficer"));
+    });
+});
+
+
+builder.Services.AddSingleton<IAuthorizationHandler, AdminAuthorizationHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, OfficerAuthorizationHandler>();
+
 
 var app = builder.Build();
 
@@ -58,6 +92,7 @@ app.UseAuthorization();
 
 // Use session middleware
 app.UseSession();
+
 
 app.UseEndpoints(endpoints =>
 {

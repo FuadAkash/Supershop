@@ -1,3 +1,32 @@
 ﻿<h1>Index</h1>
 
 <partial name="_Notification" />
+
+@model List<Users>
+
+<div class="row">
+    @foreach (var obj in Model)
+    {
+        <div class="col-md-2 mb-2">
+            <div class="card border-info h-100">
+                <div class="card-header">@obj.Name</div>
+                <div class="card-body d-flex flex-column">
+                    <div class="flex-grow-1">
+                        <p class="card-text">Email: @obj.Email</p>
+                        <p class="card-text">Phone: @obj.Phone</p>
+                    </div>
+                    <div>
+                        @if (!string.IsNullOrEmpty(obj.ImagePath))
+                        {
+                            <img src="@Url.Content("~/usersimages/" + obj.ImagePath)" class="d-block user-select-none mx-auto mt-2" style="max-width: 75%; max-height: 150px;" alt="Image">
+                        }
+                        else
+                        {
+                            <span class="text-center">No Image Available</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

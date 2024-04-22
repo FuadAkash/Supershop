@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Supershop.Authorization;
 
 namespace Supershop.Controllers
 {
@@ -27,25 +28,31 @@ namespace Supershop.Controllers
             _db = db;
             _webHostEnvironment = webHostEnvironment;
         }
-        
-        [Authorize]
+
+        [AdminAuthorization]
         public IActionResult Index()
         {
             List<Users> objUserList = _db.Users.ToList();
             return View(objUserList);
         }
-        
-        [Authorize]
+
+        [AdminAuthorization]
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
-        [Authorize]
+        [AdminAuthorization]
         [ValidateAntiForgeryToken] // Add anti-forgery token to prevent CSRF attacks
         public async Task<IActionResult> Register(Users obj, IFormFile file)
         {
+            if (!ModelState.IsValid)
+            {
+                // There are validation errors, so return to the form page with validation errors
+                return View(obj);
+            }
+
             // Check if email already exists in the database
             if (_db.Users.Any(u => u.Email == obj.Email))
             {

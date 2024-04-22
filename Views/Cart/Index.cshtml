@@ -1,0 +1,142 @@
+﻿@model List<items>
+
+@{
+    ViewData["Title"] = "Generate Bill";
+}
+
+<h1>@ViewData["Title"]</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+<form asp-controller="Cart" asp-action="Search" method="post">
+    <div class="input-group mb-3">
+        <input type="text" name="searchTerm" class="form-control" placeholder="Search">
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit">Search</button>
+        </div>
+    </div>
+</form>
+
+
+<hr />
+
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>Items</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td id="Name_@obj.Id">@obj.Name</td>
+                        <td>@obj.Type</td>
+                        <td id="Price_@obj.Id">@obj.Price</td>
+                        <td>
+                            <input type="number" min="1" max="@obj.Count" id="Count_@obj.Id" />
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" onclick="addToCart('@obj.Id')">Add to Cart</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        
+        <h2>Cart</h2>
+        <div id="cart">
+            <!-- Cart items will be displayed here -->
+        </div>
+        VAT Rate (%): <input type="number" id="vatRateInput" value="15" min="0"> <!-- Assuming default VAT rate is 15% -->
+        <br />
+        Discount (%): <input type="number" id="discountInput" value="0" min="0"> <!-- Assuming default discount is 0% -->
+        <br />
+        <div id="totalPrice">Total Price: 0.00</div>
+        <br />
+        <!--<button onclick="generatePDF()">Generate PDF</button>-->
+    </div>
+</div>
+
+
+
+@section Scripts {
+    
+    <script>
+        var totalPrice = 0;
+        var vatRate = 0.15; // Assuming default VAT rate is 15%
+        var discount = 0; // Assuming default discount is 0%
+
+        function addToCart(itemId) {
+            var quantity = parseInt($('#Count_' + itemId).val());
+            var itemName = $('#Name_' + itemId).text();
+            var itemPrice = parseFloat($('#Price_' + itemId).text());
+
+            var subtotal = itemPrice * quantity;
+            totalPrice += subtotal;
+
+            vatRate = parseFloat($('#vatRateInput').val()) / 100;
+            discount = parseFloat($('#discountInput').val()) / 100;
+
+            var discountedPrice = totalPrice * (1 - discount);
+            var vatAmount = discountedPrice * vatRate;
+            var totalPriceWithVAT = discountedPrice + vatAmount;
+
+            var cartItemHtml = '<div class="cart-item">';
+            cartItemHtml += '<table class="table">';
+            cartItemHtml += '<thead><tr><th>Item:</th><th>Quantity:</th><th>Price:</th></tr></thead>';
+            cartItemHtml += '<tbody>';
+            cartItemHtml += '<tr><td>' + itemName + '</td><td>' + quantity + '</td><td>' + subtotal.toFixed(2) + '</td></tr>';
+            cartItemHtml += '</tbody>';
+            cartItemHtml += '</table>';
+            cartItemHtml += '</div>';
+
+            $('#totalPrice').text('Total Price (including VAT): ' + totalPriceWithVAT.toFixed(2));
+            $('#cart').append(cartItemHtml);
+        }
+
+
+        function generatePDF() {
+            // Create a new PDF document
+            var doc = new jsPDF();
+
+            // Set up initial y-position for content
+            var y = 10;
+
+            // Add title
+            doc.text("Your Cart Items", 10, y);
+            y += 10;
+
+            // Loop through cart items and add them to the PDF
+            $('.cart-item').each(function (index, element) {
+                var itemName = $(element).find('tbody td:first').text();
+                var quantity = $(element).find('tbody td:nth-child(2)').text();
+                var price = $(element).find('tbody td:nth-child(3)').text();
+
+                // Add item to the PDF
+                doc.text(itemName + ', Quantity: ' + quantity + ', Price: ' + price, 10, y);
+                y += 10; // Increase y-position for next item
+            });
+
+            // Generate a Blob object representing the PDF
+            var blob = doc.output('blob');
+
+            // Create a URL for the Blob object
+            var url = URL.createObjectURL(blob);
+
+            // Open the PDF in a new window
+            window.open(url);
+        }
+
+
+    </script>
+}

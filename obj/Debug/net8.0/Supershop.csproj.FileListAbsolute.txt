@@ -559,3 +559,16 @@ D:\.NET\Supershop\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFramework
 D:\.NET\Supershop\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\.NET\Supershop\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 D:\.NET\Supershop\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.barcodes.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.bouncy-castle-connector.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.forms.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.io.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.kernel.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.layout.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.pdfa.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.pdfua.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.sign.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.styledxmlparser.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.svg.dll
+D:\.NET\Supershop\bin\Debug\net8.0\itext.commons.dll
+D:\.NET\Supershop\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll

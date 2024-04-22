@@ -4,37 +4,59 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>Register</h1>
 
-<form method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+<form method="post" enctype="multipart/form-data" asp-controller="users" asp-action="register" class="border p-3 mt-4 mx-auto" style="width: 800px;">
+    <div class="row pb-2">
+        <h2 class="text-white">Register</h2>
+        <hr />
     </div>
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
+    <div class="row">
+        <div class="col-md-3" style="width: 350px;">
+            <label>Name:</label>
+            <input type="text" class="form-control" asp-for="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col-md-3" style="width: 350px;">
+            <label>Email:</label>
+            <input type="email" class="form-control" asp-for="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Password"></label>
-        <input asp-for="Password" type="password" class="form-control" />
-        <span asp-validation-for="Password" class="text-danger"></span>
+    <div class="row mt-3">
+        <div class="col-md-3" style="width: 350px;">
+            <label>Password:</label>
+            <input type="password" class="form-control" asp-for="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="col-md-3" style="width: 350px;">
+            <label>Confirm Password:</label>
+            <input type="password" class="form-control" asp-for="ConfirmPassword" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Phone"></label>
-        <input asp-for="Phone" class="form-control" />
+    <div class="row mt-3">
+        <div class="col-md-3" style="width: 350px;">
+            <label>Phone:</label>
+            <input type="text" class="form-control" asp-for="Phone" />
+        </div>
+        <div class="col-md-3" style="width: 350px;">
+            <label>Type:</label>
+            <input type="text" class="form-control" asp-for="Type" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Type"></label>
-        <input asp-for="Type" class="form-control" />
-        <span asp-validation-for="Type" class="text-danger"></span>
+    <div class="row mt-3">
+        <div class="col-md-3" style="width: 350px;">
+            <label>Image:</label>
+            <input type="file" name="file" class="form-control" />
+        </div>
     </div>
-    <div class="form-group">
-        <label>Image:</label>
-        <input type="file" name="file" class="form-control" />
+    <div class="row mt-3">
+        <div class="col-md-6 text-left">
+            <button type="submit" class="btn btn-primary" style="width:150px">Register</button>
+        </div>
+        <div class="col-md-6 text-end">
+            <a asp-controller="users" asp-action="index" class="btn btn-outline-secondary" style="width:150px">Back to List</a>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Register</button>
 </form>
-
