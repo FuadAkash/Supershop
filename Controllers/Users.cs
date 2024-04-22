@@ -29,13 +29,14 @@ namespace Supershop.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        [AdminAuthorization]
+        [Authorize]
         public IActionResult Index()
         {
             List<Users> objUserList = _db.Users.ToList();
             return View(objUserList);
         }
 
+        [Authorize]
         [AdminAuthorization]
         public IActionResult Register()
         {
@@ -96,6 +97,7 @@ namespace Supershop.Controllers
         }
         
         [Authorize]
+        [AdminAuthorization]
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -112,7 +114,7 @@ namespace Supershop.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        [AdminAuthorization]
         public IActionResult Edit(Users obj, IFormFile file)
         {
             if (file != null && file.Length > 0)
@@ -130,8 +132,8 @@ namespace Supershop.Controllers
             TempData["success"] = "User Edited Successfully!";
             return RedirectToAction("Index");
         }
-        
-        [Authorize]
+
+        [AdminAuthorization]
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -149,7 +151,7 @@ namespace Supershop.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
-        [Authorize]
+        [AdminAuthorization]
         public IActionResult DeleteConfirmed(int? id)
         {
             var user = _db.Users.Find(id);

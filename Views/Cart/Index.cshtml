@@ -21,8 +21,9 @@
 
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-7">
         <h2>Items</h2>
+
         <table class="table">
             <thead>
                 <tr>
@@ -41,102 +42,190 @@
                         <td>@obj.Type</td>
                         <td id="Price_@obj.Id">@obj.Price</td>
                         <td>
-                            <input type="number" min="1" max="@obj.Count" id="Count_@obj.Id" />
+                            <input class="form-control form-control-sm"type="number" min="1" max="@obj.Count" id="Count_@obj.Id" />
                         </td>
                         <td>
-                            <button class="btn btn-primary" onclick="addToCart('@obj.Id')">Add to Cart</button>
+                            <button class="badge bg-primary" onclick="addToCart('@obj.Id')"><i class="bi bi-bag"></i>Add to Cart</button>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
-    <div class="col-md-4">
-        
-        <h2>Cart</h2>
-        <div id="cart">
-            <!-- Cart items will be displayed here -->
-        </div>
-        VAT Rate (%): <input type="number" id="vatRateInput" value="15" min="0"> <!-- Assuming default VAT rate is 15% -->
-        <br />
-        Discount (%): <input type="number" id="discountInput" value="0" min="0"> <!-- Assuming default discount is 0% -->
-        <br />
-        <div id="totalPrice">Total Price: 0.00</div>
-        <br />
-        <!--<button onclick="generatePDF()">Generate PDF</button>-->
+    <div class="col-md-5">
+        <h2>Customer Information</h2>
+        <form id="customerInfoForm">
+            <div>
+                <label for="customerName">Customer Name:</label>
+                <input class="form-control" id="customerName" name="customerName">
+            </div>
+            <br />
+            <div>
+                <label for="phoneNumber">Phone Number:</label>
+                <input class="form-control" id="phoneNumber" name="phoneNumber">
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary" onclick="addCustomerInfo(event)">Submit</button>
+        </form>
     </div>
+</div>
+
+<div class="row border p-3 mt-4 mx-auto" style="width: 800px;">
+    <div class="col-md-12 d-flex justify-content-between align-items-center">
+        <h2>Cart</h2>
+        <button class="btn btn-danger" onclick="clearCart()">Clear</button>
+    </div>
+    <div id="cart">
+        <!-- Cart items will be displayed here -->
+    </div>
+    <!-- VAT Rate & Discount -->
+    <div>
+        VAT Rate (%): <input class="form-control form-control-sm" type="number" id="vatRateInput" value="0" min="0" style="width: 150px;">
+        <br />
+        Discount (%): <input class="form-control form-control-sm" type="number" id="discountInput" value="0" min="0" style="width: 150px;">
+        <br />
+        <button class="badge bg-info" onclick="applyVatAndDiscount()">Apply VAT & Discount</button>
+        <br />
+        <br />
+    </div>
+    <!-- Total Price -->
+    <hr />
+    <div class="text-success" id="totalPrice" style="font-weight: bold; font-size: larger;">Total Price: 0.00</div>
+    <br />
+    <br />
+    <!-- Generate PDF Button -->
+    <button class="badge bg-info" style="width: 100px;" onclick="generatePDF()">Generate PDF</button>
 </div>
 
 
 
-@section Scripts {
-    
-    <script>
+
+<script>
+    var vatRate = 0; // Assuming default VAT rate is 15%
+    var discount = 0; // Assuming default discount is 0%
+
+    $(document).ready(function () {
+        // Load cart items from localStorage if available
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        renderCart(cartItems);
+    });
+
+    function addCustomerInfo(event) {
+        event.preventDefault(); // Prevent form submission
+        var customerName = $('#customerName').val();
+        var phoneNumber = $('#phoneNumber').val();
+
+        // Create customer object
+        var customer = {
+            name: customerName,
+            phoneNumber: phoneNumber
+        };
+
+        // Save customer info to localStorage
+        localStorage.setItem('customer', JSON.stringify(customer));
+
+        renderCart(); // Render cart with customer info
+    }
+
+    function addToCart(itemId) {
+        var quantity = parseInt($('#Count_' + itemId).val());
+        var itemName = $('#Name_' + itemId).text();
+        var itemPrice = parseFloat($('#Price_' + itemId).text());
+
+        var subtotal = itemPrice * quantity;
+
+        // Create cart item object
+        var cartItem = {
+            itemId: itemId,
+            itemName: itemName,
+            quantity: quantity,
+            subtotal: subtotal
+        };
+
+        // Add cart item to local storage
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(cartItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        renderCart(); // Render cart with updated cart items
+    }
+
+    function renderCart() {
+        var customerInfo = JSON.parse(localStorage.getItem('customer')); // Get customer info from localStorage
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Render customer information
+        var customerInfoHtml = '<div class="customer-info">\
+                                        <span class="text-info">Customer Name:</span> ' + customerInfo.name + '<br>\
+                                        <span class="text-info">Phone Number:</span> ' + customerInfo.phoneNumber + '<br><br>\
+                                    </div>';
+
+        $('#cart').html(customerInfoHtml);
+
+        // Render cart items
         var totalPrice = 0;
-        var vatRate = 0.15; // Assuming default VAT rate is 15%
-        var discount = 0; // Assuming default discount is 0%
-
-        function addToCart(itemId) {
-            var quantity = parseInt($('#Count_' + itemId).val());
-            var itemName = $('#Name_' + itemId).text();
-            var itemPrice = parseFloat($('#Price_' + itemId).text());
-
-            var subtotal = itemPrice * quantity;
-            totalPrice += subtotal;
-
-            vatRate = parseFloat($('#vatRateInput').val()) / 100;
-            discount = parseFloat($('#discountInput').val()) / 100;
-
-            var discountedPrice = totalPrice * (1 - discount);
-            var vatAmount = discountedPrice * vatRate;
-            var totalPriceWithVAT = discountedPrice + vatAmount;
-
+        cartItems.forEach(function (item) {
             var cartItemHtml = '<div class="cart-item">';
             cartItemHtml += '<table class="table">';
-            cartItemHtml += '<thead><tr><th>Item:</th><th>Quantity:</th><th>Price:</th></tr></thead>';
+            cartItemHtml += '<thead><tr class="table-info"><th>Item:</th><th>Quantity:</th><th>Price:</th></tr></thead>';
             cartItemHtml += '<tbody>';
-            cartItemHtml += '<tr><td>' + itemName + '</td><td>' + quantity + '</td><td>' + subtotal.toFixed(2) + '</td></tr>';
+            cartItemHtml += '<tr class="table-success"><td>' + item.itemName + '</td><td>' + item.quantity + '</td><td class="subtotal">' + item.subtotal.toFixed(2) + '</td></tr>';
             cartItemHtml += '</tbody>';
             cartItemHtml += '</table>';
             cartItemHtml += '</div>';
-
-            $('#totalPrice').text('Total Price (including VAT): ' + totalPriceWithVAT.toFixed(2));
             $('#cart').append(cartItemHtml);
-        }
+            totalPrice += item.subtotal;
+        });
+
+        // Update total price
+        var totalPriceWithVAT = calculateTotalPrice(totalPrice);
+        $('#totalPrice').text('Total Price (including VAT): ' + totalPriceWithVAT.toFixed(2));
+    }
 
 
-        function generatePDF() {
-            // Create a new PDF document
-            var doc = new jsPDF();
+    function applyVatAndDiscount() {
+        // Get VAT rate and discount values
+        vatRate = parseFloat($('#vatRateInput').val()) / 100;
+        discount = parseFloat($('#discountInput').val()) / 100;
 
-            // Set up initial y-position for content
-            var y = 10;
+        // Get cart items from local storage
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-            // Add title
-            doc.text("Your Cart Items", 10, y);
-            y += 10;
+        // Update each item with VAT and discount
+        var totalPrice = 0;
+        cartItems.forEach(function (item) {
+            var subtotal = item.subtotal;
+            var discountedSubtotal = subtotal * (1 - discount);
+            var totalWithVat = discountedSubtotal + (discountedSubtotal * vatRate);
+            item.subtotal = totalWithVat;
+            totalPrice += totalWithVat;
+        });
 
-            // Loop through cart items and add them to the PDF
-            $('.cart-item').each(function (index, element) {
-                var itemName = $(element).find('tbody td:first').text();
-                var quantity = $(element).find('tbody td:nth-child(2)').text();
-                var price = $(element).find('tbody td:nth-child(3)').text();
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        renderCart(cartItems);
 
-                // Add item to the PDF
-                doc.text(itemName + ', Quantity: ' + quantity + ', Price: ' + price, 10, y);
-                y += 10; // Increase y-position for next item
-            });
+        // Update total price display
+        var totalPriceWithVAT = calculateTotalPrice(totalPrice);
+        $('#totalPrice').text('Total Price (including VAT): ' + totalPriceWithVAT.toFixed(2));
+    }
 
-            // Generate a Blob object representing the PDF
-            var blob = doc.output('blob');
-
-            // Create a URL for the Blob object
-            var url = URL.createObjectURL(blob);
-
-            // Open the PDF in a new window
-            window.open(url);
-        }
+    function calculateTotalPrice(totalPrice) {
+        return totalPrice;
+    }
 
 
-    </script>
-}
+    function clearLocalStorage() {
+        localStorage.removeItem('cartItems');
+        localStorage.removeItem('customer');
+    }
+
+    function clearCart() {
+        $('#cart').empty(); // Clear cart items from the HTML
+        totalPrice = 0; // Reset total price
+        $('#totalPrice').text('Total Price: 0.00'); // Update total price display
+        clearLocalStorage(); // Clear cart items from localStorage
+    }
+
+</script>
+
+

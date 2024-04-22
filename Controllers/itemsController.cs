@@ -22,6 +22,7 @@ namespace Supershop.Controllers
             _db = db;
             _webHostEnvironment = webHostEnvironment;
         }
+        
         [Authorize]
         public IActionResult Index()
         {

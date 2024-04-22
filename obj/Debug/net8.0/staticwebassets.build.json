@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ziVDxQfXn5paORozqABpPtj4csMRIbT3lFmqnFs2zEI=",
+  "Hash": "Ef4xm4IlMxJjDU9Lg5LHMziZ8pqoyPXC7GSKkjul1Pc=",
   "Source": "Supershop",
   "BasePath": "_content/Supershop",
   "Mode": "Default",
@@ -414,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a61e3529-33d8-4cd0-b94e-aeeb5c225d6f_Ice Cream.jpg"
+    },
+    {
+      "Identity": "D:\\.NET\\Supershop\\wwwroot\\images\\abf902f1-dade-4668-bfb1-4cf063a26d75_surfxl.jpeg",
+      "SourceId": "Supershop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.NET\\Supershop\\wwwroot\\",
+      "BasePath": "_content/Supershop",
+      "RelativePath": "images/abf902f1-dade-4668-bfb1-4cf063a26d75_surfxl.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\abf902f1-dade-4668-bfb1-4cf063a26d75_surfxl.jpeg"
     },
     {
       "Identity": "D:\\.NET\\Supershop\\wwwroot\\images\\ac456b2d-294a-468f-a637-f9896a0c8684_images.jpeg",
@@ -1499,44 +1518,6 @@
       "OriginalItemSpec": "wwwroot\\usersimage\\02dda1fa-8309-4b9e-8e62-42beec058e5f_Md-Arif-Akash.png"
     },
     {
-      "Identity": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\0f2a03ba-e079-4b7a-9bc0-5f59c788a60d_Md-Arif-Akash.png",
-      "SourceId": "Supershop",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\.NET\\Supershop\\wwwroot\\",
-      "BasePath": "_content/Supershop",
-      "RelativePath": "usersimage/0f2a03ba-e079-4b7a-9bc0-5f59c788a60d_Md-Arif-Akash.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\usersimage\\0f2a03ba-e079-4b7a-9bc0-5f59c788a60d_Md-Arif-Akash.png"
-    },
-    {
-      "Identity": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\241765f5-4939-4fdb-bf9e-6ebda9bd7d17_Nahiyan.jpg",
-      "SourceId": "Supershop",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\.NET\\Supershop\\wwwroot\\",
-      "BasePath": "_content/Supershop",
-      "RelativePath": "usersimage/241765f5-4939-4fdb-bf9e-6ebda9bd7d17_Nahiyan.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\usersimage\\241765f5-4939-4fdb-bf9e-6ebda9bd7d17_Nahiyan.jpg"
-    },
-    {
       "Identity": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\29a413fd-a848-4d03-8993-739c36358e36_my-passport-photo.jpg",
       "SourceId": "Supershop",
       "SourceType": "Discovered",
@@ -1556,12 +1537,12 @@
       "OriginalItemSpec": "wwwroot\\usersimage\\29a413fd-a848-4d03-8993-739c36358e36_my-passport-photo.jpg"
     },
     {
-      "Identity": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\425af4df-43d8-4ab7-a835-7db8be5160da_Nahiyan.jpg",
+      "Identity": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\6451fc98-835c-4d67-88b6-b452dfa8b2d4_Nahiyan.jpg",
       "SourceId": "Supershop",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\.NET\\Supershop\\wwwroot\\",
       "BasePath": "_content/Supershop",
-      "RelativePath": "usersimage/425af4df-43d8-4ab7-a835-7db8be5160da_Nahiyan.jpg",
+      "RelativePath": "usersimage/6451fc98-835c-4d67-88b6-b452dfa8b2d4_Nahiyan.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1572,26 +1553,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\usersimage\\425af4df-43d8-4ab7-a835-7db8be5160da_Nahiyan.jpg"
-    },
-    {
-      "Identity": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\d3d03377-b497-44af-91b0-69b2096d4604_my-passport-photo.jpg",
-      "SourceId": "Supershop",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\.NET\\Supershop\\wwwroot\\",
-      "BasePath": "_content/Supershop",
-      "RelativePath": "usersimage/d3d03377-b497-44af-91b0-69b2096d4604_my-passport-photo.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\usersimage\\d3d03377-b497-44af-91b0-69b2096d4604_my-passport-photo.jpg"
+      "OriginalItemSpec": "wwwroot\\usersimage\\6451fc98-835c-4d67-88b6-b452dfa8b2d4_Nahiyan.jpg"
     }
   ]
 }
