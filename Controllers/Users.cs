@@ -36,7 +36,6 @@ namespace Supershop.Controllers
             return View(objUserList);
         }
 
-        [Authorize]
         [AdminAuthorization]
         public IActionResult Register()
         {
@@ -96,7 +95,6 @@ namespace Supershop.Controllers
             }
         }
         
-        [Authorize]
         [AdminAuthorization]
         public IActionResult Edit(int? id)
         {

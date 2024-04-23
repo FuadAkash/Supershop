@@ -97,6 +97,10 @@
       "PackagePath": "staticwebassets\\images\\f67dc651-b5e1-4443-bff9-2807b6aee8ec_nestle.jpeg"
     },
     {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\images\\supershop.png",
+      "PackagePath": "staticwebassets\\images\\supershop.png"
+    },
+    {
       "Id": "D:\\.NET\\Supershop\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -311,6 +315,14 @@
     {
       "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\6451fc98-835c-4d67-88b6-b452dfa8b2d4_Nahiyan.jpg",
       "PackagePath": "staticwebassets\\usersimage\\6451fc98-835c-4d67-88b6-b452dfa8b2d4_Nahiyan.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\6bd7de9c-bcf8-45ec-a4d3-6846845d8534_Iqbal.jpg",
+      "PackagePath": "staticwebassets\\usersimage\\6bd7de9c-bcf8-45ec-a4d3-6846845d8534_Iqbal.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\851a2df2-8cf6-4356-9d31-0c26adf6f4cd_Iqbal.jpg",
+      "PackagePath": "staticwebassets\\usersimage\\851a2df2-8cf6-4356-9d31-0c26adf6f4cd_Iqbal.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Supershop.Microsoft.AspNetCore.StaticWebAssets.props",

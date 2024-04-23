@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace Supershop.Controllers
 {
@@ -45,5 +46,23 @@ namespace Supershop.Controllers
             return View("Index", searchResults);
 
         }
+
+        [HttpPost]
+        public IActionResult UpdateItemQuantity(int itemId, int quantity)
+        {
+            // Update the quantity of the item in your data source
+            var item = _db.items.Find(itemId);
+            if (item != null)
+            {
+                item.Count -= quantity;
+                _db.SaveChanges(); // Save changes to the database
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
     }
 }

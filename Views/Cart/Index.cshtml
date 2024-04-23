@@ -5,7 +5,10 @@
 }
 
 <h1>@ViewData["Title"]</h1>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+
 
 <form asp-controller="Cart" asp-action="Search" method="post">
     <div class="input-group mb-3">
@@ -94,138 +97,13 @@
     <br />
     <br />
     <!-- Generate PDF Button -->
+    <!-- Finalize Bill Button -->
+    <button class="badge bg-info" style="width: 100px;" onclick="finalizeBill()">Finalize Bill</button>
+
     <button class="badge bg-info" style="width: 100px;" onclick="generatePDF()">Generate PDF</button>
 </div>
 
 
-
-
-<script>
-    var vatRate = 0; // Assuming default VAT rate is 15%
-    var discount = 0; // Assuming default discount is 0%
-
-    $(document).ready(function () {
-        // Load cart items from localStorage if available
-        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        renderCart(cartItems);
-    });
-
-    function addCustomerInfo(event) {
-        event.preventDefault(); // Prevent form submission
-        var customerName = $('#customerName').val();
-        var phoneNumber = $('#phoneNumber').val();
-
-        // Create customer object
-        var customer = {
-            name: customerName,
-            phoneNumber: phoneNumber
-        };
-
-        // Save customer info to localStorage
-        localStorage.setItem('customer', JSON.stringify(customer));
-
-        renderCart(); // Render cart with customer info
-    }
-
-    function addToCart(itemId) {
-        var quantity = parseInt($('#Count_' + itemId).val());
-        var itemName = $('#Name_' + itemId).text();
-        var itemPrice = parseFloat($('#Price_' + itemId).text());
-
-        var subtotal = itemPrice * quantity;
-
-        // Create cart item object
-        var cartItem = {
-            itemId: itemId,
-            itemName: itemName,
-            quantity: quantity,
-            subtotal: subtotal
-        };
-
-        // Add cart item to local storage
-        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        cartItems.push(cartItem);
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-        renderCart(); // Render cart with updated cart items
-    }
-
-    function renderCart() {
-        var customerInfo = JSON.parse(localStorage.getItem('customer')); // Get customer info from localStorage
-        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-        // Render customer information
-        var customerInfoHtml = '<div class="customer-info">\
-                                        <span class="text-info">Customer Name:</span> ' + customerInfo.name + '<br>\
-                                        <span class="text-info">Phone Number:</span> ' + customerInfo.phoneNumber + '<br><br>\
-                                    </div>';
-
-        $('#cart').html(customerInfoHtml);
-
-        // Render cart items
-        var totalPrice = 0;
-        cartItems.forEach(function (item) {
-            var cartItemHtml = '<div class="cart-item">';
-            cartItemHtml += '<table class="table">';
-            cartItemHtml += '<thead><tr class="table-info"><th>Item:</th><th>Quantity:</th><th>Price:</th></tr></thead>';
-            cartItemHtml += '<tbody>';
-            cartItemHtml += '<tr class="table-success"><td>' + item.itemName + '</td><td>' + item.quantity + '</td><td class="subtotal">' + item.subtotal.toFixed(2) + '</td></tr>';
-            cartItemHtml += '</tbody>';
-            cartItemHtml += '</table>';
-            cartItemHtml += '</div>';
-            $('#cart').append(cartItemHtml);
-            totalPrice += item.subtotal;
-        });
-
-        // Update total price
-        var totalPriceWithVAT = calculateTotalPrice(totalPrice);
-        $('#totalPrice').text('Total Price (including VAT): ' + totalPriceWithVAT.toFixed(2));
-    }
-
-
-    function applyVatAndDiscount() {
-        // Get VAT rate and discount values
-        vatRate = parseFloat($('#vatRateInput').val()) / 100;
-        discount = parseFloat($('#discountInput').val()) / 100;
-
-        // Get cart items from local storage
-        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-        // Update each item with VAT and discount
-        var totalPrice = 0;
-        cartItems.forEach(function (item) {
-            var subtotal = item.subtotal;
-            var discountedSubtotal = subtotal * (1 - discount);
-            var totalWithVat = discountedSubtotal + (discountedSubtotal * vatRate);
-            item.subtotal = totalWithVat;
-            totalPrice += totalWithVat;
-        });
-
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        renderCart(cartItems);
-
-        // Update total price display
-        var totalPriceWithVAT = calculateTotalPrice(totalPrice);
-        $('#totalPrice').text('Total Price (including VAT): ' + totalPriceWithVAT.toFixed(2));
-    }
-
-    function calculateTotalPrice(totalPrice) {
-        return totalPrice;
-    }
-
-
-    function clearLocalStorage() {
-        localStorage.removeItem('cartItems');
-        localStorage.removeItem('customer');
-    }
-
-    function clearCart() {
-        $('#cart').empty(); // Clear cart items from the HTML
-        totalPrice = 0; // Reset total price
-        $('#totalPrice').text('Total Price: 0.00'); // Update total price display
-        clearLocalStorage(); // Clear cart items from localStorage
-    }
-
-</script>
+<script src="~/js/site.js"></script>
 
 

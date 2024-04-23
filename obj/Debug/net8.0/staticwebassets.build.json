@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ef4xm4IlMxJjDU9Lg5LHMziZ8pqoyPXC7GSKkjul1Pc=",
+  "Hash": "5LIiMcrDjauZi7agmREeEJFmrLo+5Cj2o5IML4D5TCg=",
   "Source": "Supershop",
   "BasePath": "_content/Supershop",
   "Mode": "Default",
@@ -528,6 +528,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\f67dc651-b5e1-4443-bff9-2807b6aee8ec_nestle.jpeg"
+    },
+    {
+      "Identity": "D:\\.NET\\Supershop\\wwwroot\\images\\supershop.png",
+      "SourceId": "Supershop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.NET\\Supershop\\wwwroot\\",
+      "BasePath": "_content/Supershop",
+      "RelativePath": "images/supershop.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\supershop.png"
     },
     {
       "Identity": "D:\\.NET\\Supershop\\wwwroot\\js\\site.js",
@@ -1554,6 +1573,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\usersimage\\6451fc98-835c-4d67-88b6-b452dfa8b2d4_Nahiyan.jpg"
+    },
+    {
+      "Identity": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\6bd7de9c-bcf8-45ec-a4d3-6846845d8534_Iqbal.jpg",
+      "SourceId": "Supershop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.NET\\Supershop\\wwwroot\\",
+      "BasePath": "_content/Supershop",
+      "RelativePath": "usersimage/6bd7de9c-bcf8-45ec-a4d3-6846845d8534_Iqbal.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\usersimage\\6bd7de9c-bcf8-45ec-a4d3-6846845d8534_Iqbal.jpg"
+    },
+    {
+      "Identity": "D:\\.NET\\Supershop\\wwwroot\\usersimage\\851a2df2-8cf6-4356-9d31-0c26adf6f4cd_Iqbal.jpg",
+      "SourceId": "Supershop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.NET\\Supershop\\wwwroot\\",
+      "BasePath": "_content/Supershop",
+      "RelativePath": "usersimage/851a2df2-8cf6-4356-9d31-0c26adf6f4cd_Iqbal.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\usersimage\\851a2df2-8cf6-4356-9d31-0c26adf6f4cd_Iqbal.jpg"
     }
   ]
 }
